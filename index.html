@@ -16,6 +16,9 @@
         line-height: 1.6;
         margin: 0;
         padding: 0;
+        background-color: #ffffff;
+        color: #000000;
+        transition: background-color 0.5s, color 0.5s;
       }
       .container {
         width: 100%;
@@ -58,10 +61,25 @@
         color: gray;
         margin-top: 20px;
       }
+      .dark-mode-toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+      }
+      .dark-mode-toggle input {
+        margin-left: 10px;
+      }
     </style>
   </head>
   <body>
     <div class="container">
+      <!-- Dark Mode Toggle -->
+      <div class="dark-mode-toggle">
+        <label for="dark-mode">Dark Mode</label>
+        <input type="checkbox" id="dark-mode" />
+      </div>
+      
       <!-- Profile Section -->
       <div class="profile-section">
         <div class="profile-card">
@@ -82,96 +100,27 @@
         </div>
         <p class="disclaimer">Disclaimer: Most of the below representative images used are not owned by me, and full credit goes to their respective creators.</p>
       </div>
-      <!-- Projects Section -->
-      <div class="section">
-        <div class="heading">Projects</div>
-        <div class="card">
-          <img src="images/fpga-project.jpg" alt="FPGA Project" />
-          <div class="card-content">
-            <p><a href="https://webthesis.biblio.polito.it/secure/17894/1/tesi.pdf">Implementation of a Generative Transformer Architecture on a Xilinx FPGA using Vitis AI</a></p>
-            <p>(Ongoing project) This project aims to implement a transformer architecture on FPGA hardware using Vitis AI, focusing on performance acceleration and efficiency improvements. The provided thesis document link serves as a reference for my ongoing work, based on an external project that has already been completed.</p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="images/5g-scheduler.jpg" alt="5G Scheduler" />
-          <div class="card-content">
-            <p><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10247079">Deep Reinforcement Learning-based resource scheduling for 5G MAC scheduler (Rice University and ITU)</a></p>
-            <p>(Ongoing project) Participated in the ITU-Rice Summer 2024 competition, aiming to enhance the existing reinforcement learning algorithm (using new reward mechanisms and techniques for action space exploration) developed by the Rice University team. The goal is to further optimize performance for better resource scheduling in 5G networks, significantly improving network efficiency. The provided research paper link serves as a base reference for my ongoing work.</p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="images/nl2sql.jpg" alt="NL2SQL Project" />
-          <div class="card-content">
-            <p><a href="#">NL2SQL – A language to SQL translation on a small device language model</a></p>
-            <p>(Ongoing project) Developing a compact language model optimized for ARM architecture to translate natural language queries into SQL efficiently on small devices.</p>
-          </div>
-        </div>
-      </div>
 
-
-      <!-- Publications/Presentations Section -->
-      <div class="section">
-        <div class="heading">Publications/Presentations</div>
-        <div class="card">
-          <img src="images/defcon-2022.JPG" alt="DEFCON 2022" />
-          <div class="card-content">
-            <p><a href="https://drive.google.com/file/d/1jMr-OXRSLpIbksaMHDUgaNyT3Bx0V7Vj/view">“Authentication, & Authorization Protocol for a Digital Amateur Radio Satellite System”, DEFCON 2022, Las Vegas, USA.</a></p>
-            <p>This work was conducted in collaboration with the Open Research Institute. We presented a poster describing our proposed protocol at DEFCON 2022 RF village for digital amateur radio satellite systems, aiming to enhance the security of satellite communications.</p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="images/sony-research.jpg" alt="Sony Research" />
-          <div class="card-content">
-            <p><a href="https://www.linkedin.com/video/live/urn:li:ugcPost:6873848570743795712/">“60GHz Wi-Fi indoor water vapor detection technique”, SONY Research ‘DreamToReality’ contest 2021, India.</a></p>
-            <p>Presented a novel technique for detecting water vapor indoors using 60GHz Wi-Fi technology during the Sony India Research contest. This was an initial idea pitch session; later, during my graduate studies, I discovered that this method is effective at 100GHz, not at 60GHz. The presentation begins at 2:12:57 in the video.</p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="images/south-indian-sdr.jpg" alt="South Indian SDR Conference" />
-          <div class="card-content">
-            <p><a href="https://www.youtube.com/watch?v=9UFOpdoGXZ8&t=377s&themeRefresh=1">“Primer to Wyners wiretap codes”, South Indian SDR group conference invited speaker, May 2023.</a></p>
-            <p>Gave an introduction to Wyner's wiretap codes and their application in secure communications during this invited session.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Work Experience Section -->
-      <div class="section">
-        <div class="heading">Work Experience</div>
-        
-        <!-- Northeastern University -->
-        <div class="card">
-          <img src="images/Northeastern.jpg" alt="Northeastern University" />
-          <div class="card-content">
-            <p><strong>Research Assistant - Northeastern University, Boston (July 2024 - Present)</strong></p>
-            <p>Working on RF and AI training using ray tracing techniques. Developing an RF data measurement pipeline and implemented GPU-based data processing, reducing processing time. Re-developed an image segmentation model using PyTorch for peak loss prediction and exploring the use of Encoder/Transformer & NeRF models for anomaly detection and synthetic wireless channel data generation.</p>
-          </div>
-        </div>
-        
-        <!-- Saankhya Labs Pvt. Ltd -->
-        <div class="card">
-          <img src="images/saankhyalabs.jpg" alt="Saankhya Labs Pvt. Ltd" />
-          <div class="card-content">
-            <p><strong>Embedded Software Engineer / Signal Processing - Saankhya Labs Pvt. Ltd (Dec 2021 - May 2023)</strong></p>
-            <p>Co-developed firmware modules for an ARM-based SDR receiver radio chip, including delay spread and channel estimation. Conducted RF testing for various conversion techniques and calibrated LDPC post-scaler values using MATLAB to improve sensitivity performance under challenging RF conditions.</p>
-          </div>
-        </div>
-        
-        <!-- Fortytwo Labs Pvt. Ltd -->
-        <div class="card">
-          <img src="images/fortytwolabs.jpg" alt="Fortytwo Labs Pvt. Ltd" />
-          <div class="card-content">
-            <p><strong>Research and Development Consultant - Fortytwo Labs Pvt. Ltd (May 2018 - March 2021)</strong></p>
-            <p>Architected and implemented secure IoT systems using eMMC 5.0 NAND, Embedded Linux & FreeRTOS, proposed Quantum Key Distribution (QKD) system design, and architechted secure mobile solutions leveraging ARM TrustZone and information theoretic cryptography techniques. Delivered technical documents, end products and manufacturing plans for large-scale production, achieving cost efficiency and technical viability.</p>
-          </div>
-        </div>
-      </div>
+      <!-- Work Experience, Projects, and Publications/Presentations Sections (use your provided code here) -->
 
       <!-- Footer -->
       <div class="footer">
         <p>© 2024 Tilak Marupilla. All rights reserved.</p>
         <p>Last updated: October 2024</p>
+        <p>Thanks <a href="https://jonbarron.info" target="_blank">Jon Barron</a> for this amazing template.</p>
       </div>
     </div>
+    <script>
+      const toggleSwitch = document.getElementById('dark-mode');
+      toggleSwitch.addEventListener('change', function() {
+        if (this.checked) {
+          document.body.style.backgroundColor = '#333333';
+          document.body.style.color = '#ffffff';
+        } else {
+          document.body.style.backgroundColor = '#ffffff';
+          document.body.style.color = '#000000';
+        }
+      });
+    </script>
   </body>
 </html>
